@@ -279,3 +279,15 @@ define Device/ubnt_acb-isp
   IMAGES := sysupgrade.bin
 endef
 TARGET_DEVICES += ubnt_acb-isp
+
+define Device/ubnt_acb-ac
+  $(Device/ubnt)
+  ATH_SOC := ar9342
+  IMAGE_SIZE := 15744k
+  DEVICE_TITLE := Ubiquiti airCube AC
+  UBNT_BOARD := ACB-AC
+  UBNT_TYPE := ACB
+  UBNT_CHIP := ar9342
+  IMAGES := sysupgrade.bin
+endef
+TARGET_DEVICES += ubnt_acb-ac
