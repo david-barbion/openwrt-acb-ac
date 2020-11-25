@@ -276,7 +276,7 @@ define Device/ubnt_acb-isp
   UBNT_BOARD := ACB-ISP
   UBNT_TYPE := ACB
   UBNT_CHIP := qca9533
-  IMAGES := sysupgrade.bin
+  IMAGES += sysupgrade.bin
 endef
 TARGET_DEVICES += ubnt_acb-isp
 
@@ -284,10 +284,11 @@ define Device/ubnt_acb-ac
   $(Device/ubnt)
   ATH_SOC := ar9342
   IMAGE_SIZE := 15744k
+  DEVICES_PACKAGES += ath10k-firmware-qca988x-ct-htt
   DEVICE_TITLE := Ubiquiti airCube AC
   UBNT_BOARD := ACB-AC
   UBNT_TYPE := ACB
   UBNT_CHIP := ar9342
-  IMAGES := sysupgrade.bin
+  IMAGES += sysupgrade.bin
 endef
 TARGET_DEVICES += ubnt_acb-ac
